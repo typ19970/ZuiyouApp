@@ -1,0 +1,43 @@
+{
+  "activeColor": "#149EFF",
+  "inActiveColor": "#4F556D",
+  "selectTab": 0,
+  "tabs": [
+    {
+      "size": 24,
+      "enable": true,
+      "index": 0,
+      "pageUrl": "main/tabs/home",
+      "title": "最右"
+    },
+    {
+      "size": 24,
+      "enable": true,
+      "index": 1,
+      "pageUrl": "main/tabs/channel",
+      "title": "发现"
+    },
+    {
+      "size": 40,
+      "enable": true,
+      "index": 2,
+      "tintColor": "#149EFF",
+      "pageUrl": "main/tabs/publish",
+      "title": ""
+    },
+    {
+      "size": 24,
+      "enable": true,
+      "index": 3,
+      "pageUrl": "main/tabs/msg",
+      "title": "消息"
+    },
+    {
+      "size": 24,
+      "enable": true,
+      "index": 4,
+      "pageUrl": "main/tabs/me",
+      "title": "我的"
+    }
+  ]
+}

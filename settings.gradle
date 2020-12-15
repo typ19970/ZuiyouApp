@@ -1,0 +1,5 @@
+include ':lib_navcompiler'
+include ':lib_navannotation'
+include ':scaffold'
+include ':app'
+rootProject.name = "zuiyou"

@@ -1,0 +1,27 @@
+package me.typ.zuiyou.ui.page
+
+import android.os.Bundle
+import android.util.Log
+import com.kunminx.architecture.ui.page.DataBindingConfig
+import me.typ.lib_navannotation.FragmentDestination
+import me.typ.scaffold.base.BaseFragment
+import me.typ.zuiyou.BR
+import me.typ.zuiyou.R
+import me.typ.zuiyou.ui.state.ChannelViewModel
+import me.typ.zuiyou.ui.state.MeViewModel
+import me.typ.zuiyou.ui.state.MessageViewModel
+
+@FragmentDestination(pageUrl = "main/tabs/msg")
+class MessageFragment : BaseFragment() {
+
+    private val mState by lazy { getFragmentScopeViewModel(MeViewModel::class.java) }
+
+    override fun getDataBindingConfig(): DataBindingConfig {
+        return DataBindingConfig(R.layout.me_fragment, BR.vm, mState)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.i("TAG", "onCreate: MessageFragment" )
+    }
+}
