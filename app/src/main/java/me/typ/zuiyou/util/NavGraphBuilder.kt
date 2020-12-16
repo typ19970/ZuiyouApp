@@ -8,6 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraph
 import androidx.navigation.NavGraphNavigator
 import androidx.navigation.fragment.FragmentNavigator
+import me.typ.scaffold.navigator.FixFragmentNavigator
 import me.typ.zuiyou.data.config.AppConfig
 
 object NavGraphBuilder {
@@ -24,10 +25,9 @@ object NavGraphBuilder {
         //它只为默认的展示页提供导航服务,但真正的跳转还是交给对应的navigator来完成的
         val navGraph = NavGraph(NavGraphNavigator(provider))
 
-        //TODO fragment 重建
-        //val fragmentNavigator = FragmentNavigator(activity, childFragmentManager, containerId)
-        val fragmentNavigator = provider.getNavigator(FragmentNavigator::class.java)
-        //provider.addNavigator(fragmentNavigator)
+        //使用hide/show的FragmentNavigator
+        val fragmentNavigator = FixFragmentNavigator(activity, childFragmentManager, containerId)
+        provider.addNavigator(fragmentNavigator)
         val activityNavigator = provider.getNavigator(ActivityNavigator::class.java)
         val destConfig = AppConfig.getDestConfig()
         destConfig.values.forEach { node ->
