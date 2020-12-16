@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import me.typ.zuiyou.data.model.BottomBar
 import me.typ.zuiyou.data.model.Destination
+import me.typ.zuiyou.data.model.HomeTabConfigMo
 import me.typ.zuiyou.util.AppGlobals
 import java.io.BufferedReader
 import java.io.IOException
@@ -15,9 +16,9 @@ object AppConfig {
 
     private val mGson = GsonBuilder().create()
 
-    private var sDestConfig: HashMap<String, Destination>? = null
-
     private var sBottomBar: BottomBar? = null
+    private var sDestConfig: HashMap<String, Destination>? = null
+    private var homeTabConfig: HomeTabConfigMo? = null
 
     fun getDestConfig(): HashMap<String, Destination> {
         if (sDestConfig == null) {
@@ -38,6 +39,14 @@ object AppConfig {
             sBottomBar = mGson.fromJson(content, BottomBar::class.java)
         }
         return sBottomBar!!
+    }
+
+    fun getHomeTabConfig(): HomeTabConfigMo {
+        if (homeTabConfig == null) {
+            val content = parseFile("home_tabs_config.json")
+            homeTabConfig = mGson.fromJson(content, HomeTabConfigMo::class.java)
+        }
+        return homeTabConfig!!
     }
 
     private fun parseFile(fileName: String): String {
