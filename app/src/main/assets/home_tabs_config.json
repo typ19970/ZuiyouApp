@@ -1,52 +1,82 @@
-{
-  "activeSize": 16,
-  "normalSize": 14,
-  "activeColor": "#149EFF",
-  "normalColor": "#666666",
-  "select": 0,
-  "tabGravity": 0,
-  "tabs": [
-    {
-      "title": "关注",
-      "index": 0,
-      "tag": "focus",
-      "enable": true
-    },
-    {
-      "title": "推荐",
-      "index": 1,
-      "tag": "hot",
-      "enable": true
-    },
-    {
-      "title": "视频",
-      "index": 2,
-      "tag": "video",
-      "enable": true
-    },
-    {
-      "title": "图文",
-      "index": 3,
-      "tag": "text",
-      "enable": true
-    },
-    {
-      "title": "语玩",
-      "index": 4,
-      "tag": "voice",
-      "enable": true
-    },
-    {
-      "title": "游戏",
-      "index": 5,
-      "tag": "game",
-      "enable": true
-    },
-    {
-      "title": "三坑",
-      "index": 6,
-      "tag": "cos",
-      "enable": true
-    }
-  ]
-}
+[
+  {
+    "title": "关注",
+    "index": 0,
+    "tag": "focus",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": true
+  },
+  {
+    "title": "话题",
+    "index": 1,
+    "tag": "topic",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": true
+  },
+  {
+    "title": "推荐",
+    "index": 2,
+    "tag": "hot",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": true
+  },
+  {
+    "title": "视频",
+    "index": 3,
+    "tag": "video",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": true
+  },
+  {
+    "title": "图文",
+    "index": 4,
+    "tag": "text",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": true
+  },
+  {
+    "title": "语玩",
+    "index": 5,
+    "tag": "voice",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": true
+  },
+  {
+    "title": "游戏",
+    "index": 6,
+    "tag": "game",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": true
+  },
+  {
+    "title": "三坑",
+    "index": 7,
+    "tag": "cos",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": true
+  }
+]

@@ -7,6 +7,7 @@ import me.typ.lib_navannotation.FragmentDestination
 import me.typ.scaffold.base.BaseFragment
 import me.typ.zuiyou.BR
 import me.typ.zuiyou.R
+import me.typ.zuiyou.ui.adapter.HomeTabFragmentAdapter
 import me.typ.zuiyou.ui.state.HomeViewModel
 
 @FragmentDestination(pageUrl = "main/tabs/home", asStarter = true)
@@ -16,11 +17,18 @@ class HomeFragment : BaseFragment() {
 
     override fun getDataBindingConfig(): DataBindingConfig {
         return DataBindingConfig(R.layout.home_fragment, BR.vm, mState)
+            .addBindingParam(BR.click, ClickProxy())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("TAG", "onCreate: HomeFragment" )
+        Log.d("TAG", "onCreate: HomeFragment")
+
+        mState.viewPagerAdapter.set(HomeTabFragmentAdapter(childFragmentManager, lifecycle))
+    }
+
+    class ClickProxy {
+        fun search() {}
     }
 
 }

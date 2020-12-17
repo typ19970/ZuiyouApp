@@ -4,34 +4,69 @@
 
     <data>
 
+        <variable
+            name="vm"
+            type="me.typ.zuiyou.ui.state.HomeViewModel" />
+
+        <variable
+            name="click"
+            type="me.typ.zuiyou.ui.page.HomeFragment.ClickProxy" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
+            initWithViewPager2="@{vm.viewPagerAdapter}"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:overScrollMode="never"
+            app:layout_constraintEnd_toStartOf="@+id/image_search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabBackground="@null"
             app:tabGravity="center"
-            app:tabIndicatorColor="@color/color_theme"
-            app:tabIndicatorFullWidth="false"
-            app:tabIndicatorHeight="2dp"
-            app:tabInlineLabel="true"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="50dp"
+            app:tabMinWidth="50dp"
             app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/color_theme"
-            app:tabTextColor="@color/color_333"
-            app:tabUnboundedRipple="true" />
+            app:tabPaddingEnd="4dp"
+            app:tabPaddingStart="4dp"
+            app:tabRippleColor="@null" />
+
+        <ImageView
+            android:id="@+id/image_search"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="@{()->click.search()}"
+            android:padding="12dp"
+            android:src="@drawable/ic_search_white_night"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tab_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_line_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_layout" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" />
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

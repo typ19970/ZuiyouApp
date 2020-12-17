@@ -11,5 +11,6 @@
 
     <color name="color_theme">#149EFF</color>
     <color name="color_333">#333333</color>
+    <color name="color_line_grey">#F0F0F0</color>
 
 </resources>

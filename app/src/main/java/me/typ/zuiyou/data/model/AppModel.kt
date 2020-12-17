@@ -33,19 +33,13 @@ data class BottomTab(
     val title: String
 )
 
-data class HomeTabConfigMo(
-    val activeColor: String,
-    val activeSize: Int,
-    val normalColor: String,
-    val normalSize: Int,
-    val select: Int,
-    val tabGravity: Int,
-    val tabs: List<TabMo>
-)
-
 data class TabMo(
     val enable: Boolean,
     val index: Int,
+    val activeSize: Int,
+    val normalSize: Int,
+    val activeColor: String,
+    val normalColor: String,
     val tag: String,
     val title: String
 )

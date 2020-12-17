@@ -5,7 +5,7 @@ import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import me.typ.zuiyou.data.model.BottomBar
 import me.typ.zuiyou.data.model.Destination
-import me.typ.zuiyou.data.model.HomeTabConfigMo
+import me.typ.zuiyou.data.model.TabMo
 import me.typ.zuiyou.util.AppGlobals
 import java.io.BufferedReader
 import java.io.IOException
@@ -17,8 +17,9 @@ object AppConfig {
     private val mGson = GsonBuilder().create()
 
     private var sBottomBar: BottomBar? = null
+    private var enableHomeTabs: MutableList<TabMo>? = null
     private var sDestConfig: HashMap<String, Destination>? = null
-    private var homeTabConfig: HomeTabConfigMo? = null
+
 
     fun getDestConfig(): HashMap<String, Destination> {
         if (sDestConfig == null) {
@@ -41,13 +42,18 @@ object AppConfig {
         return sBottomBar!!
     }
 
-    fun getHomeTabConfig(): HomeTabConfigMo {
-        if (homeTabConfig == null) {
+    fun getHomeEnableTabs(): List<TabMo> {
+        if (enableHomeTabs == null) {
             val content = parseFile("home_tabs_config.json")
-            homeTabConfig = mGson.fromJson(content, HomeTabConfigMo::class.java)
+            enableHomeTabs = mGson.fromJson(content, object : TypeToken<List<TabMo>>() {}.type)
+            //过滤掉不开启的tab
+            enableHomeTabs!!.forEach {
+                if (!it.enable) enableHomeTabs!!.remove(it)
+            }
         }
-        return homeTabConfig!!
+        return enableHomeTabs!!
     }
+
 
     private fun parseFile(fileName: String): String {
         val assets: AssetManager = AppGlobals.getApplication().assets

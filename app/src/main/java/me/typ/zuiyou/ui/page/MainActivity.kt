@@ -19,8 +19,6 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        UltimateBarX.get(this).color(Color.BLUE).applyStatusBar()
-        UltimateBarX.get(this).color(Color.GRAY).applyNavigationBar()
 
         val fragment =supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
         val navController =NavHostFragment.findNavController(fragment!!)
