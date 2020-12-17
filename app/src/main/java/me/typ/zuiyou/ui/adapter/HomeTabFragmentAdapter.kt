@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import me.typ.zuiyou.data.config.AppConfig
+import me.typ.zuiyou.ui.page.FeedListFragment
 import me.typ.zuiyou.ui.page.MeFragment
 
 class HomeTabFragmentAdapter(fm: FragmentManager, lifecycle: Lifecycle) :
@@ -15,7 +16,7 @@ class HomeTabFragmentAdapter(fm: FragmentManager, lifecycle: Lifecycle) :
     }
 
     override fun createFragment(position: Int): Fragment {
-        return MeFragment()
+        return FeedListFragment()
     }
 
 }

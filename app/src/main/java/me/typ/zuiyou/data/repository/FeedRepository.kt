@@ -1,24 +1,19 @@
-package me.typ.zuiyou.ui.state
+package me.typ.zuiyou.data.repository
 
-import androidx.databinding.ObservableField
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
+import com.kunminx.architecture.data.response.DataResult
+import com.kunminx.architecture.data.response.ResponseStatus
 import me.typ.zuiyou.data.model.Feed
-import me.typ.zuiyou.data.repository.FeedRepository
-import me.typ.zuiyou.domain.request.FeedRequest
 
-class HomeViewModel : ViewModel() {
+class FeedRepository private constructor() {
 
-    val viewPagerAdapter = ObservableField<FragmentStateAdapter>()
+    companion object {
+        val mGson = GsonBuilder().create()
+        val INSTANCE by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) { FeedRepository() }
+    }
 
-    val feedList = MutableLiveData<List<Feed>>()
-
-    val mRequest = FeedRequest()
-
-    init {
-        //mRequest.getFeedList()
+    fun getFeedList(result: DataResult.Result<List<Feed>>) {
         val json = """[
       {
         "id": 1578919900,
@@ -372,8 +367,7 @@ class HomeViewModel : ViewModel() {
         }
       }
     ]"""
-        val list = FeedRepository.mGson.fromJson<List<Feed>>(json, object : TypeToken<List<Feed>>() {}.type)
-        feedList.value = list
+        val list = mGson.fromJson<List<Feed>>(json, object : TypeToken<List<Feed>>() {}.type)
+        result.onResult(DataResult(list, ResponseStatus()))
     }
-
 }

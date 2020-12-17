@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="text"
+            type="String" />
+    </data>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="@{text}"
+        android:textColor="@color/color_2f2"
+        android:textSize="@dimen/sp_16"
+        tools:text="阿巴阿巴阿巴" />
+
+</layout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="9999"
+            android:textColor="@color/color_3d3"
+            android:textSize="@dimen/sp_12"
+            app:backgroundTint="@color/color_white"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/icon_post_share"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconTintMode="multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="2.4w"
+            android:textColor="@color/color_3d3"
+            android:textSize="@dimen/sp_12"
+            app:backgroundTint="@color/color_white"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/icon_post_comment"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconTintMode="multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/color_3d3"
+            android:textSize="@dimen/sp_14"
+            app:backgroundTint="@color/color_white"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/icon_post_like"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconTintMode="multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="6.6w"
+            android:textColor="@color/color_3d3"
+            android:textSize="@dimen/sp_14"
+            app:backgroundTint="@color/color_white"
+            app:cornerRadius="0dp"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconTintMode="multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/color_3d3"
+            android:textSize="@dimen/sp_14"
+            app:backgroundTint="@color/color_white"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/icon_post_hate"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconTintMode="multiply" />
+
+    </LinearLayout>
+</layout>

@@ -62,5 +62,6 @@ dependencies {
     implementation project(path: ':lib_navannotation')
 
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.github.whataa:noDrawable:1.1.1'
 
 }
