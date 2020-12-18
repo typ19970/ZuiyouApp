@@ -44,7 +44,7 @@ fun initTabLayout(
         }
     })
     //切换到【推荐】tab
-    viewPager2.post { viewPager2.setCurrentItem(1, false) }
+    viewPager2.post { viewPager2.setCurrentItem(2, false) }
 
     //tabLayout.setupWithViewPager(viewPager2,true)
     //viewPager2 就不能和再用TabLayout.setUpWithViewPager()了

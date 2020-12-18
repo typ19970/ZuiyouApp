@@ -4,6 +4,9 @@
 
     <data>
 
+        <variable
+            name="ugc"
+            type="me.typ.zuiyou.data.model.Ugc" />
     </data>
 
     <LinearLayout
@@ -15,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="9999"
+            android:text="@{String.valueOf(ugc.shareCount)}"
             android:textColor="@color/color_3d3"
             android:textSize="@dimen/sp_12"
             app:backgroundTint="@color/color_white"
@@ -29,7 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="2.4w"
+            android:text="@{String.valueOf(ugc.commentCount)}"
             android:textColor="@color/color_3d3"
             android:textSize="@dimen/sp_12"
             app:backgroundTint="@color/color_white"
@@ -56,7 +59,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="6.6w"
+            android:text="@{String.valueOf(ugc.likeCount)}"
             android:textColor="@color/color_3d3"
             android:textSize="@dimen/sp_14"
             app:backgroundTint="@color/color_white"

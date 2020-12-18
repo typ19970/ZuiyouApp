@@ -35,7 +35,9 @@
             comment="@{feed.topComment}"
             layout="@layout/layout_feed_top_comment" />
 
-        <include layout="@layout/layout_feed_interaction" />
+        <include
+            ugc="@{feed.ugc}"
+            layout="@layout/layout_feed_interaction" />
 
         <View
             android:layout_width="match_parent"

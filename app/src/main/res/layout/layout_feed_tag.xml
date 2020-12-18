@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="tag"
             type="String" />
+
     </data>
 
     <com.google.android.material.button.MaterialButton
+        isVisible="@{tag!=null||!tag.isEmpty()}"
+        android:text="@{tag}"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dp_30"
         android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginTop="@dimen/dp_8"
         android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_4"
         android:gravity="center_vertical"
         android:includeFontPadding="false"
         android:orientation="vertical"
@@ -29,7 +33,6 @@
         app:iconGravity="textStart"
         app:iconPadding="@dimen/dp_4"
         app:iconSize="@dimen/dp_12"
-        android:text="@{tag}"
         app:iconTintMode="multiply"
         tools:text="神评论集中营" />
 

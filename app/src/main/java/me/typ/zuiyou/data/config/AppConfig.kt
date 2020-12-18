@@ -46,12 +46,9 @@ object AppConfig {
         if (enableHomeTabs == null) {
             val content = parseFile("home_tabs_config.json")
             enableHomeTabs = mGson.fromJson(content, object : TypeToken<List<TabMo>>() {}.type)
-            //过滤掉不开启的tab
-            enableHomeTabs!!.forEach {
-                if (!it.enable) enableHomeTabs!!.remove(it)
-            }
         }
-        return enableHomeTabs!!
+        //过滤掉不开启的tab
+        return enableHomeTabs!!.filter { it.enable }
     }
 
 

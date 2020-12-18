@@ -78,5 +78,15 @@
     "activeColor": "#149EFF",
     "normalColor": "#333333",
     "enable": true
+  },
+  {
+    "title": "妹子",
+    "index": 8,
+    "tag": "girl",
+    "activeSize": 20,
+    "normalSize": 16,
+    "activeColor": "#149EFF",
+    "normalColor": "#333333",
+    "enable": false
   }
 ]
