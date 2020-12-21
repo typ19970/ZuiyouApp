@@ -1,3 +1,4 @@
+include ':lib_network'
 include ':lib_navcompiler'
 include ':lib_navannotation'
 include ':scaffold'

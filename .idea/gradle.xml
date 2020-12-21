@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib_navannotation" />
             <option value="$PROJECT_DIR$/lib_navcompiler" />
+            <option value="$PROJECT_DIR$/lib_network" />
             <option value="$PROJECT_DIR$/scaffold" />
           </set>
         </option>
